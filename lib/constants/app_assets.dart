@@ -44,6 +44,10 @@ class AppAssets {
     width: 18,
   );
 
+  static final Widget settingsIconPng = Image.asset('assets/settings_icon.png');
+
+  static final Widget profilepicture = Image.asset('assets/profile_picture.png');
+
   static final Widget tiktokIconPng = Image.asset('assets/tiktok_logo.png');
 
   static final Widget instagramIconPng = Image.asset('assets/instagram_logo.png');
