@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
+import 'package:reviewtu_app/screens/home_screen.dart';
 import 'package:reviewtu_app/screens/registration_screen.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
@@ -52,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LoginScreen()),
+                            builder: (context) => const HomeScreen()),
                       );
                     },
                     backgroundColor: AppColors.black,

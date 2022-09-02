@@ -98,7 +98,7 @@ class AppAssets {
 
   static final Widget twitterIconPng = Image.asset('assets/twitter_logo.png');
 
-  static final Widget homeIconPng = Image.asset('assets/home_icon.png');
+  static final Widget homeIconPng = Image.asset('assets/home_icon_black.png');
 
   static final Widget searchIconPng = Image.asset('assets/search_icon.png');
 

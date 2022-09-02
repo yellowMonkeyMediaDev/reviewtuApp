@@ -11,7 +11,8 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin{
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,15 +35,20 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
       ),
       bottomNavigationBar: BottomAppBar(
         child: TabBar(
+          labelColor: AppColors.grey,
+          labelPadding: EdgeInsets.zero,
           controller: TabController(
             vsync: this,
             length: HomeTab.values.length,
             initialIndex: 0,
           ),
+          indicator: const BoxDecoration(
+            border: Border(top: BorderSide(color: AppColors.black, width: 1.5)),
+          ),
           tabs: HomeTab.values.map((tab) {
             return Tab(
               iconMargin: const EdgeInsets.only(bottom: 6.0),
-              icon: getTabIcon(tab),
+              icon: SizedBox(width: 28, height: 24, child: getTabIcon(tab)),
               text: getTabTitle(tab, context),
             );
           }).toList(),
