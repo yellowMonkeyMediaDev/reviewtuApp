@@ -46,13 +46,66 @@ class AppAssets {
 
   static final Widget settingsIconPng = Image.asset('assets/settings_icon.png');
 
-  static final Widget profilepicture = Image.asset('assets/profile_picture.png');
+  static final Widget profilepicture =
+      Image.asset('assets/profile_picture.png');
+
+  static final Widget messagesIcon = SvgPicture.asset(
+    'assets/message_icon.svg',
+    semanticsLabel: 'Message icon',
+  );
+
+  static final Widget plusIcon = SvgPicture.asset(
+    'assets/plus_icon.svg',
+    semanticsLabel: 'Plus icon',
+  );
+
+  static final Widget filterButton = SvgPicture.asset(
+    'assets/filter_button.svg',
+    semanticsLabel: 'filter button',
+  );
+
+  static final Widget homeIconActive = SvgPicture.asset(
+    'assets/home_icon_active.svg',
+    semanticsLabel: 'home icon',
+  );
+
+  static final Widget searchIcon = SvgPicture.asset(
+    'assets/search_icon.svg',
+    semanticsLabel: 'search icon',
+  );
+
+  static final Widget favoritesIcon = SvgPicture.asset(
+    'assets/favorites_icon.svg',
+    semanticsLabel: 'favorites icon',
+  );
+
+  static final Widget notificationsIcon = SvgPicture.asset(
+    'assets/notiffications_icon.svg',
+    semanticsLabel: 'notifications icon',
+  );
+
+  static final Widget profileIcon = SvgPicture.asset(
+    'assets/profile_icon.svg',
+    semanticsLabel: 'profile icon',
+  );
 
   static final Widget tiktokIconPng = Image.asset('assets/tiktok_logo.png');
 
-  static final Widget instagramIconPng = Image.asset('assets/instagram_logo.png');
+  static final Widget instagramIconPng =
+      Image.asset('assets/instagram_logo.png');
 
   static final Widget facebookIconPng = Image.asset('assets/facebook_logo.png');
 
   static final Widget twitterIconPng = Image.asset('assets/twitter_logo.png');
+
+  static final Widget homeIconPng = Image.asset('assets/home_icon.png');
+
+  static final Widget searchIconPng = Image.asset('assets/search_icon.png');
+
+  static final Widget postIconPng = Image.asset('assets/post_icon.png');
+
+  static final Widget notificationsIconPng =
+      Image.asset('assets/notifications_icon.png');
+
+  static final Widget profileIconPng = Image.asset('assets/profile_icon.png');
 }
