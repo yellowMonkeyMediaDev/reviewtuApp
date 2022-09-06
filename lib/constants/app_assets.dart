@@ -108,4 +108,83 @@ class AppAssets {
       Image.asset('assets/notifications_icon.png');
 
   static final Widget profileIconPng = Image.asset('assets/profile_icon.png');
+
+  static final Widget heartIcon = SvgPicture.asset(
+    'assets/heart_icon.svg',
+    semanticsLabel: 'Heart icon',
+  );
+
+  static final Widget commentsIcon = SvgPicture.asset(
+    'assets/comments_icon.svg',
+    semanticsLabel: 'Comments icon',
+  );
+
+  static final Widget sendInChatIcon = SvgPicture.asset(
+    'assets/send_in_chat_icon.svg',
+    semanticsLabel: 'Send in chat icon',
+  );
+
+  static final Widget threeDotsIcon = SvgPicture.asset(
+    'assets/three_dots_icon.svg',
+    semanticsLabel: 'Three dots icon',
+  );
+
+  static final Widget postProfilePicturePng = Image.asset('assets/post_profile_picture.png');
+
+  static final Widget samplePhoto = Image.asset('assets/sample_photo.jpeg');
+
+  static final Widget sampleGTAPhoto = Image.asset('assets/gta_sample_photo.jpeg');
+
+
+  static final Widget verifiedProfileIcon = SvgPicture.asset(
+    'assets/verified_icon.svg',
+    semanticsLabel: 'Verified icon',
+  );
+
+  static final Widget settingsWhiteIcon = SvgPicture.asset(
+    'assets/settings_white_icon.svg',
+    semanticsLabel: 'Settings white icon',
+  );
+
+  static final Widget profileScreenProfileImage = Image.asset('assets/profile_screen_profile_image.png');
+
+  static final Widget arrowUpIcon = SvgPicture.asset(
+    'assets/arrow_up_icon.svg',
+    semanticsLabel: 'Arrow up icon',
+  );
+
+  static final Widget starIcon = SvgPicture.asset(
+    'assets/star_icon.svg',
+    semanticsLabel: 'Star icon',
+  );
+
+  static final Widget starIconBlack = SvgPicture.asset(
+    'assets/star_icon_black.svg',
+    semanticsLabel: 'Star icon black',
+  );
+
+  static final Widget picturesIcon = SvgPicture.asset(
+    'assets/pictures_icon.svg',
+    semanticsLabel: 'Pictures icon',
+  );
+
+  static final Widget savedIcon = SvgPicture.asset(
+    'assets/saved_icon.svg',
+    semanticsLabel: 'Saved icon',
+  );
+
+  static final Widget pinnedIcon = SvgPicture.asset(
+    'assets/pinned_icon.svg',
+    semanticsLabel: 'Pinned icon',
+  );
+
+  static final Widget picturesIconPng = Image.asset('assets/pictures_icon.png');
+
+  static final Widget savedIconPng = Image.asset('assets/saved_icon.png');
+
+  static final Widget pinnedIconPng = Image.asset('assets/pinned_icon.png');
+
+  static final Widget starIconBlackPng = Image.asset('assets/star_icon_black.png');
+
+
 }

@@ -7,4 +7,6 @@ class AppColors{
   static const Color grey = Colors.grey;
   static const Color lightGrey = Color(0xffEFEFEF);
   static const Color extraLightGrey =Color(0xffF5F5F5);
+  static const Color greyForProfileText = Color(0xff878D98);
+
 }

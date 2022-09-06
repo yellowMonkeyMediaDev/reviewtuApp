@@ -21,27 +21,26 @@ class PrimaryButtonWidget extends StatelessWidget {
     return SizedBox(
       height: buttonHeight,
       child: TextButton(
-          onPressed: callback ?? () {},
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
-            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-            ),
+        onPressed: callback ?? () {},
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
           ),
-          child: Row(
-            children: [
-              const Spacer(),
-              Text(
-                buttonText,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: textColor),
-              ),
-              const Spacer(),
-            ],
-          )),
+        ),
+        child: Row(
+          children: [
+            const Spacer(),
+            Text(
+              buttonText,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 14, fontWeight: FontWeight.w500, color: textColor),
+            ),
+            const Spacer(),
+          ],
+        ),
+      ),
     );
   }
 }
