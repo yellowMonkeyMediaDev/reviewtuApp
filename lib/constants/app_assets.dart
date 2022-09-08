@@ -180,6 +180,11 @@ class AppAssets {
     semanticsLabel: 'Pinned icon',
   );
 
+  static final Widget searchGreyIcon = SvgPicture.asset(
+    'assets/search.svg',
+    semanticsLabel: 'Search Icon',
+  );
+
   static final Widget picturesIconPng = Image.asset('assets/pictures_icon.png');
 
   static final Widget savedIconPng = Image.asset('assets/saved_icon.png');
@@ -192,6 +197,50 @@ class AppAssets {
   static final Widget backArrowWhiteIcon = SvgPicture.asset(
     'assets/back_arrow_white.svg',
     semanticsLabel: 'Back arrow white icon',
+  );
+  static final Widget goBckButtonPng = Image.asset('assets/go_back_button.png');
+
+  static final Widget goFowardButtonPng =
+      Image.asset('assets/go_foward_button.png');
+
+  static final Widget followAndInviteFriendsPng =
+      Image.asset('assets/follow_and_invite_friends.png');
+
+  static final Widget yourActivityPng = Image.asset('assets/your_activity.png');
+
+  static final Widget notificationsPng =
+      Image.asset('assets/notifications.png');
+
+  static final Widget privacyPng = Image.asset('assets/privacy.png');
+
+  static final Widget securityPng = Image.asset('assets/security.png');
+
+  static final Widget accountPng = Image.asset('assets/account.png');
+
+  static final Widget helpPng = Image.asset('assets/help.png');
+
+  static final Widget logoutPng = Image.asset('assets/logout.png');
+
+  static final Widget inviteFriendsViaWhatsappPng =
+      Image.asset('assets/invite_friends_via_whatsapp.png');
+
+  static final Widget inviteFriendsViaMessagePng =
+      Image.asset('assets/invite_friends_via_message.png');
+
+  static final Widget inviteFreindsViaEmailPng =
+      Image.asset('assets/invite_friends_via_email.png');
+
+  static final Widget accountInfoPng = Image.asset('assets/account_info.png');
+
+  static final Widget inviteFriendsViaAPng =
+      Image.asset('assets/invite_friends_viaA.png');
+
+  static final Widget interestsAndPrefrencesPng =
+      Image.asset('assets/interests_and_prefrences.png');
+
+  static final Widget goBackButton = SvgPicture.asset(
+    'assets/go_back_button.svg',
+    semanticsLabel: 'go back button',
   );
 
   static final Widget searchBlackIcon = SvgPicture.asset(
@@ -215,7 +264,7 @@ class AppAssets {
   );
 
   static final Widget sendCodeProfileImage =
-  Image.asset('assets/send_code_profile_icon.png');
+      Image.asset('assets/send_code_profile_icon.png');
 
   static final Widget blueCircleIcon = SvgPicture.asset(
     'assets/blue_circle_icon.svg',
