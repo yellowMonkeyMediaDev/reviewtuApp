@@ -1,8 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
+import 'package:reviewtu_app/screens/forgot_your_password_screen.dart';
 import 'package:reviewtu_app/screens/home_screen.dart';
 import 'package:reviewtu_app/screens/registration_screen.dart';
+import 'package:reviewtu_app/widgets/dialog_holder_widget.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -34,7 +37,13 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 35),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: TextInputWidget(placeholder: 'Username or email'),
+                child: TextInputWidget(
+                  placeholder: 'Username or email',
+                  border: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: AppColors.lightGrey, width: 1),
+                  ),
+                ),
               ),
               const SizedBox(height: 13),
               const Padding(
@@ -42,6 +51,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: TextInputWidget(
                   placeholder: 'Password',
                   obscureText: true,
+                  border: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: AppColors.lightGrey, width: 1),
+                  ),
                 ),
               ),
               const SizedBox(height: 13),
@@ -61,22 +74,43 @@ class _LoginScreenState extends State<LoginScreen> {
                     buttonText: "Log In"),
               ),
               const SizedBox(height: 26),
-              const Text(
-                "Forgot Password?",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    CupertinoModalPopupRoute(
+                      barrierDismissible: true,
+                      builder: (context) => DialogHolderWidget(
+                          route: ForgotYourPasswordScreen.route,
+                          builder: const ForgotYourPasswordScreen(),
+                          onDismissed: (_) {
+                            Navigator.of(context).pop();
+                          }),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Forgot Password?",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: AppColors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
               const SizedBox(height: 26),
-              const Text(
-                "Back",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  "Back",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: AppColors.black,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
               const Spacer(),
               const Text(
@@ -118,17 +152,33 @@ class TextInputWidget extends StatelessWidget {
     required this.placeholder,
     this.obscureText,
     this.showSuffixIcon,
+    required this.border,
+    this.suffixIcon,
+    this.suffixIconCallback,
+    this.height,
+    this.textAlign,
+    this.onSubmitted,
   }) : super(key: key);
 
   final String placeholder;
+  final InputBorder border;
   final bool? obscureText;
   final bool? showSuffixIcon;
+  final Widget? suffixIcon;
+  final Function()? suffixIconCallback;
+  final Function(String)? onSubmitted;
+  final double? height;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 40,
+      height: height ?? 40,
       child: TextField(
+        onSubmitted: onSubmitted ?? (string) {},
+        keyboardType: TextInputType.text,
+        autofocus: true,
+        textAlign: textAlign ?? TextAlign.start,
         textAlignVertical: TextAlignVertical.bottom,
         obscureText: obscureText ?? false,
         decoration: InputDecoration(
@@ -136,14 +186,12 @@ class TextInputWidget extends StatelessWidget {
           suffixIcon: showSuffixIcon ?? false
               ? Padding(
                   padding: const EdgeInsets.only(right: 10.0),
-                  child: AppAssets.checkedIcon,
+                  child: suffixIcon ?? AppAssets.checkedIcon,
                 )
               : const SizedBox(),
           fillColor: AppColors.extraLightGrey,
           hintText: placeholder,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(color: AppColors.lightGrey, width: 1),
-          ),
+          border: border,
         ),
       ),
     );

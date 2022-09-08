@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
+import 'package:reviewtu_app/screens/login_screen.dart';
+import 'package:reviewtu_app/screens/registration_screen.dart';
+import 'package:reviewtu_app/screens/sign_in_saved_data_login_settings_screen.dart';
 
 class SignInSavedDataScreen extends StatefulWidget {
   const SignInSavedDataScreen({Key? key}) : super(key: key);
@@ -41,17 +44,41 @@ class _SignInSavedDataScreenState extends State<SignInSavedDataScreen> {
                 ),
                 Column(
                   children: [
-                    SizedBox(
-                        width: 22,
-                        height: 22,
-                        child: AppAssets.settingsIconPng),
-                    const SizedBox(height: 10),
-                    const SignInScreenButton(
-                      text: 'Log in to Another Account',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const SignInSavedDataLoginSettingsScreen()),
+                        );
+                      },
+                      child: SizedBox(
+                          width: 22,
+                          height: 22,
+                          child: AppAssets.settingsIconPng),
                     ),
-                    const SizedBox(height: 10),
-                    const SignInScreenButton(
+                    const SizedBox(height: 20),
+                    SignInScreenButton(
+                      text: 'Log in to Another Account',
+                      callback: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()),
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    SignInScreenButton(
                       text: 'Sign Up for Reviewtu',
+                      callback: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const RegistrationScreen()),
+                        );
+                      },
                     ),
                   ],
                 )
@@ -61,8 +88,6 @@ class _SignInSavedDataScreenState extends State<SignInSavedDataScreen> {
         ),
       ),
     );
-
-    return Container();
   }
 }
 

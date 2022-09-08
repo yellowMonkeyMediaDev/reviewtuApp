@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/screens/choose_platform_screen.dart';
+import 'package:reviewtu_app/screens/sign_in_saved_data.dart';
 import 'package:reviewtu_app/screens/splash_screen.dart';
 
 void main() {
@@ -67,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
       future: _calculation, // a previously-obtained Future<String> or null
       builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
         if (snapshot.hasData) {
-          return const ChoosePlatformScreen();
+          return const SignInSavedDataScreen();
         } else {
           return const SplashScreen();
         }

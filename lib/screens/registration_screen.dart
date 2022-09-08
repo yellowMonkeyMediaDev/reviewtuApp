@@ -48,22 +48,46 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   const SizedBox(height: 32),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 42.0),
-                    child: TextInputWidget(placeholder: 'Email'),
+                    child: TextInputWidget(
+                      placeholder: 'Email',
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 10),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 42.0),
-                    child: TextInputWidget(placeholder: 'Full Name'),
+                    child: TextInputWidget(
+                      placeholder: 'Full Name',
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 10),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 42.0),
-                    child: TextInputWidget(placeholder: 'Phone Number'),
+                    child: TextInputWidget(
+                      placeholder: 'Phone Number',
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 10),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 42.0),
-                    child: TextInputWidget(placeholder: 'User Name'),
+                    child: TextInputWidget(
+                      placeholder: 'User Name',
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 10),
                   const Padding(
@@ -71,6 +95,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: TextInputWidget(
                       placeholder: 'Password',
                       obscureText: true,
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -79,6 +107,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: TextInputWidget(
                       placeholder: 'Confirm Password',
                       obscureText: true,
+                      border: OutlineInputBorder(
+                        borderSide:
+                            BorderSide(color: AppColors.lightGrey, width: 1),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),

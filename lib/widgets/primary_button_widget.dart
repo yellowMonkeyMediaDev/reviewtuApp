@@ -7,7 +7,8 @@ class PrimaryButtonWidget extends StatelessWidget {
       required this.backgroundColor,
       required this.textColor,
       required this.buttonText,
-      required this.buttonHeight})
+      required this.buttonHeight,
+      this.borderColor})
       : super(key: key);
 
   final Function()? callback;
@@ -15,6 +16,7 @@ class PrimaryButtonWidget extends StatelessWidget {
   final Color textColor;
   final String buttonText;
   final double buttonHeight;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class PrimaryButtonWidget extends StatelessWidget {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(backgroundColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(6), side: BorderSide(color: borderColor ?? backgroundColor)),
           ),
         ),
         child: Row(

@@ -129,12 +129,13 @@ class AppAssets {
     semanticsLabel: 'Three dots icon',
   );
 
-  static final Widget postProfilePicturePng = Image.asset('assets/post_profile_picture.png');
+  static final Widget postProfilePicturePng =
+      Image.asset('assets/post_profile_picture.png');
 
   static final Widget samplePhoto = Image.asset('assets/sample_photo.jpeg');
 
-  static final Widget sampleGTAPhoto = Image.asset('assets/gta_sample_photo.jpeg');
-
+  static final Widget sampleGTAPhoto =
+      Image.asset('assets/gta_sample_photo.jpeg');
 
   static final Widget verifiedProfileIcon = SvgPicture.asset(
     'assets/verified_icon.svg',
@@ -146,7 +147,8 @@ class AppAssets {
     semanticsLabel: 'Settings white icon',
   );
 
-  static final Widget profileScreenProfileImage = Image.asset('assets/profile_screen_profile_image.png');
+  static final Widget profileScreenProfileImage =
+      Image.asset('assets/profile_screen_profile_image.png');
 
   static final Widget arrowUpIcon = SvgPicture.asset(
     'assets/arrow_up_icon.svg',
@@ -184,7 +186,44 @@ class AppAssets {
 
   static final Widget pinnedIconPng = Image.asset('assets/pinned_icon.png');
 
-  static final Widget starIconBlackPng = Image.asset('assets/star_icon_black.png');
+  static final Widget starIconBlackPng =
+      Image.asset('assets/star_icon_black.png');
 
+  static final Widget backArrowWhiteIcon = SvgPicture.asset(
+    'assets/back_arrow_white.svg',
+    semanticsLabel: 'Back arrow white icon',
+  );
 
+  static final Widget searchBlackIcon = SvgPicture.asset(
+    'assets/search_icon_black.svg',
+    semanticsLabel: 'Search black icon',
+  );
+
+  static final Widget lineBlackIcon = SvgPicture.asset(
+    'assets/line_icon.svg',
+    semanticsLabel: 'Line icon',
+  );
+
+  static final Widget closeIconRounded = SvgPicture.asset(
+    'assets/close_icon_rounded.svg',
+    semanticsLabel: 'Close icon rounded',
+  );
+
+  static final Widget leftArrowBlackIcon = SvgPicture.asset(
+    'assets/left_arrow_black.svg',
+    semanticsLabel: 'Left arrow black icon',
+  );
+
+  static final Widget sendCodeProfileImage =
+  Image.asset('assets/send_code_profile_icon.png');
+
+  static final Widget blueCircleIcon = SvgPicture.asset(
+    'assets/blue_circle_icon.svg',
+    semanticsLabel: 'Blue circle icon',
+  );
+
+  static final Widget emptyCircleIcon = SvgPicture.asset(
+    'assets/empty_circle_icon.svg',
+    semanticsLabel: 'Empty circle icon',
+  );
 }
