@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/login_screen.dart';
-import 'package:reviewtu_app/screens/password_login_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 
 class SignInSavedDataLoginSettingsScreen extends StatefulWidget {
@@ -75,22 +73,14 @@ class _SignInSavedDataLoginSettingsScreenState
               children: [
                 ChooseTypeOfLoginWidget(
                   callback: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const PasswordLoginScreen()),
-                    );
+                    Navigator.pushNamed(context, '/passwordLogin');
                   },
                   title: "Remove saved login information",
                   subtitle: "Use password to login",
                 ),
                 ChooseTypeOfLoginWidget(
                   callback: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginScreen()),
-                    );
+                    Navigator.pushNamed(context, '/login');
                   },
                   title: "Remove account",
                   subtitle: "Use username and password to login",

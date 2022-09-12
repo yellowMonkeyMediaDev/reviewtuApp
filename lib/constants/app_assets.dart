@@ -275,4 +275,32 @@ class AppAssets {
     'assets/empty_circle_icon.svg',
     semanticsLabel: 'Empty circle icon',
   );
+
+  static final Widget videoGamesPhoto = Image.asset(
+    'assets/games_photo.jpeg',
+    fit: BoxFit.fill,
+  );
+
+  static final Widget musicPhoto = Image.asset(
+    'assets/music_photo.jpeg',
+    fit: BoxFit.fill,
+  );
+
+  static final Widget filmTvPhoto = Image.asset(
+    'assets/film_tv_photo.jpeg',
+    fit: BoxFit.fill,
+  );
+
+  static final Widget firstPageIndicator = SvgPicture.asset(
+    'assets/first_page_indicator.svg',
+    semanticsLabel: 'First page indicator',
+  );
+
+  static final Widget secondPageIndicator = SvgPicture.asset(
+    'assets/second_page_indicator.svg',
+    semanticsLabel: 'Second page indicator',
+  );
+
+
+
 }

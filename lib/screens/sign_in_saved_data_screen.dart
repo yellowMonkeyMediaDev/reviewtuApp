@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/login_screen.dart';
-import 'package:reviewtu_app/screens/registration_screen.dart';
-import 'package:reviewtu_app/screens/sign_in_saved_data_login_settings_screen.dart';
 
 class SignInSavedDataScreen extends StatefulWidget {
   const SignInSavedDataScreen({Key? key}) : super(key: key);
@@ -46,12 +43,7 @@ class _SignInSavedDataScreenState extends State<SignInSavedDataScreen> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const SignInSavedDataLoginSettingsScreen()),
-                        );
+                        Navigator.pushNamed(context, '/signInSavedDataSettings');
                       },
                       child: SizedBox(
                           width: 22,
@@ -62,22 +54,14 @@ class _SignInSavedDataScreenState extends State<SignInSavedDataScreen> {
                     SignInScreenButton(
                       text: 'Log in to Another Account',
                       callback: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen()),
-                        );
+                        Navigator.pushNamed(context, '/login');
                       },
                     ),
                     const SizedBox(height: 16),
                     SignInScreenButton(
                       text: 'Sign Up for Reviewtu',
                       callback: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const RegistrationScreen()),
-                        );
+                        Navigator.pushNamed(context, '/registration');
                       },
                     ),
                   ],

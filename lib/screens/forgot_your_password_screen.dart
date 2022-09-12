@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/password_login_screen.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 import 'login_screen.dart';
@@ -318,16 +317,16 @@ class CodeHasBeenSentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
-        Text(
+      children:  [
+        const Text(
           'A code has been sent to your\nphone. Enter that code here.',
           textAlign: TextAlign.center,
           style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
         ),
-        SizedBox(
+        const SizedBox(
           height: 46,
         ),
-        TextInputWidget(
+        const TextInputWidget(
           textAlign: TextAlign.center,
           height: 57,
           placeholder: 'Enter Code',
@@ -335,18 +334,22 @@ class CodeHasBeenSentWidget extends StatelessWidget {
             borderSide: BorderSide(color: AppColors.lightGrey, width: 1),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
         PrimaryButtonWidget(
-            backgroundColor: AppColors.black,
-            textColor: AppColors.white,
-            buttonText: "Continue",
-            buttonHeight: 40),
-        SizedBox(
+          backgroundColor: AppColors.black,
+          textColor: AppColors.white,
+          buttonText: "Continue",
+          buttonHeight: 40,
+          callback: (){
+            Navigator.pushNamed(context, '/chooseYourInterests');
+          },
+        ),
+        const SizedBox(
           height: 10,
         ),
-        PrimaryButtonWidget(
+        const PrimaryButtonWidget(
           backgroundColor: AppColors.white,
           textColor: AppColors.black,
           buttonText: "Send me another code",

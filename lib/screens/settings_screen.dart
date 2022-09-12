@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/login_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -36,7 +35,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           height: 22,
                           child: AppAssets.followAndInviteFriendsPng),
                       const SizedBox(width: 16),
-                      Text('Follow and Invite Friends '),
+                      const Text('Follow and Invite Friends '),
                     ],
                   ),
                   SizedBox(
@@ -56,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           height: 22,
                           child: AppAssets.yourActivityPng),
                       const SizedBox(width: 16),
-                      Text('Your Activity'),
+                      const Text('Your Activity'),
                     ],
                   ),
                   SizedBox(
@@ -77,7 +76,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         child: AppAssets.notificationsPng,
                       ),
                       const SizedBox(width: 16),
-                      Text('Notifications'),
+                      const Text('Notifications'),
                     ],
                   ),
                   SizedBox(
@@ -98,7 +97,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       SizedBox(
                           width: 28, height: 22, child: AppAssets.privacyPng),
                       const SizedBox(width: 16),
-                      Text('Privacy '),
+                      const Text('Privacy '),
                     ],
                   ),
                   SizedBox(
@@ -116,7 +115,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       SizedBox(
                           width: 28, height: 22, child: AppAssets.securityPng),
                       const SizedBox(width: 16),
-                      Text('Security'),
+                      const Text('Security'),
                     ],
                   ),
                   SizedBox(
@@ -134,7 +133,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       SizedBox(
                           width: 28, height: 22, child: AppAssets.accountPng),
                       const SizedBox(width: 16),
-                      Text('Account '),
+                      const Text('Account '),
                     ],
                   ),
                   SizedBox(
@@ -151,7 +150,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     children: [
                       SizedBox(width: 28, height: 22, child: AppAssets.helpPng),
                       const SizedBox(width: 16),
-                      Text('Help'),
+                      const Text('Help'),
                     ],
                   ),
                   SizedBox(
@@ -171,7 +170,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           height: 22,
                           child: AppAssets.accountInfoPng),
                       const SizedBox(width: 16),
-                      Text('Account'),
+                      const Text('Account'),
                     ],
                   ),
                   SizedBox(
@@ -191,7 +190,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           height: 22,
                           child: AppAssets.interestsAndPrefrencesPng),
                       const SizedBox(width: 16),
-                      Text('Interests and Prefrences'),
+                      const Text('Interests and Prefrences'),
                     ],
                   ),
                   SizedBox(
@@ -209,7 +208,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       SizedBox(
                           width: 28, height: 22, child: AppAssets.logoutPng),
                       const SizedBox(width: 16),
-                      Text(
+                      const Text(
                         'Logout ',
                         style: TextStyle(color: AppColors.red),
                       ),
@@ -232,10 +231,6 @@ class SearchInputWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: TextInputWidget(placeholder: 'Search',
-
-      )
-    );
+    return Container();
   }
 }

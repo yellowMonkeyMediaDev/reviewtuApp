@@ -1,11 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/forgot_your_password_screen.dart';
-import 'package:reviewtu_app/screens/home_screen.dart';
-import 'package:reviewtu_app/screens/registration_screen.dart';
-import 'package:reviewtu_app/widgets/dialog_holder_widget.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -63,11 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: PrimaryButtonWidget(
                     buttonHeight: 40,
                     callback: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeScreen()),
-                      );
+                      Navigator.pushNamed(context, '/home');
                     },
                     backgroundColor: AppColors.black,
                     textColor: AppColors.white,
@@ -76,18 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 26),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    CupertinoModalPopupRoute(
-                      barrierDismissible: true,
-                      builder: (context) => DialogHolderWidget(
-                          route: ForgotYourPasswordScreen.route,
-                          builder: const ForgotYourPasswordScreen(),
-                          onDismissed: (_) {
-                            Navigator.of(context).pop();
-                          }),
-                    ),
-                  );
+                  Navigator.pushNamed(context, '/forgotYourPassword');
                 },
                 child: const Text(
                   "Forgot Password?",
@@ -127,10 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: PrimaryButtonWidget(
                     buttonHeight: 40,
                     callback: () {
-                      Navigator.push(
+                      Navigator.pushNamed(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const RegistrationScreen()),
+                        '/registration',
                       );
                     },
                     backgroundColor: AppColors.lightGrey,

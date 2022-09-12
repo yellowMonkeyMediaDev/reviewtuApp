@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/login_screen.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 class ChoosePlatformScreen extends StatelessWidget {
@@ -96,11 +95,7 @@ class ChoosePlatformScreen extends StatelessWidget {
                     child: PrimaryButtonWidget(
                       buttonHeight: 30,
                         callback: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginScreen()),
-                          );
+                          Navigator.pushNamed(context, '/login');
                         },
                         backgroundColor: AppColors.black,
                         textColor: AppColors.white,

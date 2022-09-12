@@ -119,11 +119,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     child: PrimaryButtonWidget(
                         buttonHeight: 40,
                         callback: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const LoginScreen()),
-                          );
+                          Navigator.pushNamed(context, '/login');
                         },
                         backgroundColor: AppColors.black,
                         textColor: AppColors.white,

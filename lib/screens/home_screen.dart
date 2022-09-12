@@ -4,7 +4,6 @@ import 'package:reviewtu_app/constants/app_colors.dart';
 import 'package:reviewtu_app/constants/home_tab.dart';
 import 'package:reviewtu_app/screens/posts_feed_screen.dart';
 import 'package:reviewtu_app/screens/profile_screen.dart';
-import 'package:reviewtu_app/screens/settings_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -102,11 +101,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           title: "Mike Jones",
           trailingWidget: GestureDetector(
             onTap: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const SettingsScreen()),
-              );
+              Navigator.pushNamed(context, '/settings');
             },
               child: AppAssets.settingsWhiteIcon),
         );
