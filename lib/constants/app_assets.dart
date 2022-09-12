@@ -301,6 +301,21 @@ class AppAssets {
     semanticsLabel: 'Second page indicator',
   );
 
+  static final Widget smallerLineIcon = SvgPicture.asset(
+    'assets/smaller_line_icon.svg',
+    semanticsLabel: 'Smaller line icon',
+  );
+
+  static final Widget closeIconRoundedGrey = SvgPicture.asset(
+    'assets/x_icon_rounded_grey.svg',
+    semanticsLabel: 'Close icon rounded grey',
+  );
+
+  static final Widget checkedIconBlue = SvgPicture.asset(
+    'assets/checked_icon_blue.svg',
+    semanticsLabel: 'Checked icon blue',
+  );
+
 
 
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
 import 'package:reviewtu_app/constants/profile_tab.dart';
+import 'package:reviewtu_app/widgets/no_content_yet_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -38,13 +39,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
               labelColor: AppColors.black,
               unselectedLabelColor: AppColors.grey,
               indicator: const BoxDecoration(
-                border: Border(bottom: BorderSide(color: AppColors.black, width: 1.5)),
+                border: Border(
+                    bottom: BorderSide(color: AppColors.black, width: 1.5)),
               ),
               tabs: ProfileTab.values.map((tab) {
                 final isSelected = tab == selectedTab;
                 return Tab(
                   iconMargin: const EdgeInsets.only(bottom: 6.0),
-                  icon: SizedBox(width: 28, height: 24, child: isSelected ? getTabActiveIcon(tab) : getTabIcon(tab)),
+                  icon: SizedBox(
+                      width: 28,
+                      height: 24,
+                      child:
+                          isSelected ? getTabActiveIcon(tab) : getTabIcon(tab)),
                 );
               }).toList(),
               onTap: (index) {
@@ -58,8 +64,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Expanded(
               child: TabBarView(
                 children: [
-                  Container(
-                    color: Colors.blue,
+                  const NoContentYetWidget(
+                    title: 'No Reviews Yet.',
+                    description:
+                        "Post a review! combine it with videos and photos",
+                    buttonText: 'Search for things to review',
                   ),
                   Container(
                     color: Colors.red,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
+import 'package:reviewtu_app/screens/filter_reviews_popup.dart';
 import 'package:reviewtu_app/widgets/post_widget.dart';
 
 class PostsFeedScreen extends StatefulWidget {
@@ -59,9 +60,16 @@ class FilterLatestReviewsWidget extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(right: 14.0),
-            child: AppAssets.filterButton,
+          GestureDetector(
+            onTap: () => showModalBottomSheet<void>(
+              context: context,
+              isScrollControlled: true,
+              builder: (context) => const FilterReviewsPopup(),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 14.0),
+              child: AppAssets.filterButton,
+            ),
           ),
         ],
       ),
