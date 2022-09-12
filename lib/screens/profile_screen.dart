@@ -70,8 +70,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         "Post a review! combine it with videos and photos",
                     buttonText: 'Search for things to review',
                   ),
-                  Container(
-                    color: Colors.red,
+                  const NoContentYetWidget(
+                    title: 'No Photo Reviews',
+                    description:
+                    "Post a review! combine it with videos and photos ",
+                    buttonText: 'Upload',
                   ),
                   Container(
                     color: Colors.yellow,

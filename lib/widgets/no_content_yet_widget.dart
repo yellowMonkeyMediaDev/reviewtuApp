@@ -36,14 +36,24 @@ class NoContentYetWidget extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100.0),
-          child: PrimaryButtonWidget(
-            backgroundColor: AppColors.skyBlue,
-            textColor: AppColors.white,
-            buttonText: buttonText,
-            buttonHeight: 30,
-            callback: callback ?? () {},
+        TextButton(
+          onPressed: callback ?? () {},
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all<Color>(AppColors.skyBlue),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+                side: const BorderSide(color: AppColors.skyBlue),
+              ),
+            ),
+          ),
+          child: Text(
+            buttonText,
+            style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: AppColors.white),
           ),
         ),
       ],
