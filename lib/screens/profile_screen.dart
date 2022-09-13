@@ -3,6 +3,7 @@ import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
 import 'package:reviewtu_app/constants/profile_tab.dart';
 import 'package:reviewtu_app/widgets/no_content_yet_widget.dart';
+import 'package:reviewtu_app/widgets/reviews_grid_view_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -24,7 +25,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const ProfileInfoWidget(),
+                  ProfileInfoWidget(
+                    editProfileCallback: () {
+                      Navigator.pushNamed(context, '/editProfile');
+                    },
+                  ),
                   const SizedBox(
                     height: 14,
                   ),
@@ -64,16 +69,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Expanded(
               child: TabBarView(
                 children: [
-                  const NoContentYetWidget(
-                    title: 'No Reviews Yet.',
-                    description:
-                        "Post a review! combine it with videos and photos",
-                    buttonText: 'Search for things to review',
-                  ),
+                  const ReviewsGridViewWidget(),
+                  // const NoContentYetWidget(
+                  //   title: 'No Reviews Yet.',
+                  //   description:
+                  //       "Post a review! combine it with videos and photos",
+                  //   buttonText: 'Search for things to review',
+                  // ),
                   const NoContentYetWidget(
                     title: 'No Photo Reviews',
                     description:
-                    "Post a review! combine it with videos and photos ",
+                        "Post a review! combine it with videos and photos ",
                     buttonText: 'Upload',
                   ),
                   Container(
@@ -93,7 +99,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
 }
 
 class ProfileInfoWidget extends StatelessWidget {
-  const ProfileInfoWidget({Key? key}) : super(key: key);
+  const ProfileInfoWidget({
+    Key? key,
+    this.editProfileCallback,
+  }) : super(key: key);
+
+  final Function()? editProfileCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -165,7 +176,7 @@ class ProfileInfoWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10)),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: editProfileCallback ?? () {},
                   child: Row(
                     children: const [
                       Spacer(),

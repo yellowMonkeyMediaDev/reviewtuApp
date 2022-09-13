@@ -190,7 +190,9 @@ class PostContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(child: AppAssets.sampleGTAPhoto);
+    return SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: AppAssets.sampleGTAPhoto);
   }
 }
 

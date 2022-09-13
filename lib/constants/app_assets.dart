@@ -132,10 +132,14 @@ class AppAssets {
   static final Widget postProfilePicturePng =
       Image.asset('assets/post_profile_picture.png');
 
-  static final Widget samplePhoto = Image.asset('assets/sample_photo.jpeg');
+  static final Widget samplePhoto = Image.asset(
+    'assets/sample_photo.jpeg',
+  );
 
-  static final Widget sampleGTAPhoto =
-      Image.asset('assets/gta_sample_photo.jpeg');
+  static final Widget sampleGTAPhoto = Image.asset(
+    'assets/gta_sample_photo.jpeg',
+    fit: BoxFit.fill,
+  );
 
   static final Widget verifiedProfileIcon = SvgPicture.asset(
     'assets/verified_icon.svg',
@@ -316,6 +320,16 @@ class AppAssets {
     semanticsLabel: 'Checked icon blue',
   );
 
+  static final Widget editProfilePicture =
+      Image.asset('assets/edit_profile_picture.png');
 
+  static final Widget copyIcon = SvgPicture.asset(
+    'assets/copy_icon.svg',
+    semanticsLabel: 'Copy icon',
+  );
 
+  static final Widget starIconForRating = SvgPicture.asset(
+    'assets/star_icon_for_rating.svg',
+    semanticsLabel: 'Star icon',
+  );
 }

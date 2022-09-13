@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:reviewtu_app/main.dart';
 import 'package:reviewtu_app/screens/choose_platform_screen.dart';
 import 'package:reviewtu_app/screens/choose_your_interests_screen.dart';
+import 'package:reviewtu_app/screens/edit_profile_screen.dart';
 import 'package:reviewtu_app/screens/forgot_your_password_screen.dart';
 import 'package:reviewtu_app/screens/home_screen.dart';
 import 'package:reviewtu_app/screens/login_screen.dart';
@@ -36,6 +37,10 @@ class AppRouter {
       case '/profile':
         return MaterialPageRoute(
           builder: (BuildContext context) => const ProfileScreen(),
+        );
+      case '/editProfile':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const EditProfileScreen(),
         );
       case '/signInSavedData':
         return MaterialPageRoute(
