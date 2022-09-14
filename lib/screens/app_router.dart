@@ -10,7 +10,16 @@ import 'package:reviewtu_app/screens/login_screen.dart';
 import 'package:reviewtu_app/screens/password_login_screen.dart';
 import 'package:reviewtu_app/screens/profile_screen.dart';
 import 'package:reviewtu_app/screens/registration_screen.dart';
-import 'package:reviewtu_app/screens/settings_screen.dart';
+import 'package:reviewtu_app/screens/settings/account_info.dart';
+import 'package:reviewtu_app/screens/settings/account_screen.dart';
+import 'package:reviewtu_app/screens/settings/help_screen.dart';
+import 'package:reviewtu_app/screens/settings/interests_and_prefrences_screen.dart';
+import 'package:reviewtu_app/screens/settings/notifications_screen.dart';
+import 'package:reviewtu_app/screens/settings/privacy_screen.dart';
+import 'package:reviewtu_app/screens/settings/security_screen.dart';
+import 'package:reviewtu_app/screens/settings/settings_follow_and_invite_friends_screen.dart';
+import 'package:reviewtu_app/screens/settings/settings_screen.dart';
+import 'package:reviewtu_app/screens/settings/your_activity_screen.dart';
 import 'package:reviewtu_app/screens/sign_in_saved_data_screen.dart';
 import 'package:reviewtu_app/screens/sign_in_saved_data_login_settings_screen.dart';
 import 'package:reviewtu_app/widgets/dialog_holder_widget.dart';
@@ -79,6 +88,47 @@ class AppRouter {
                 Navigator.of(context).pop();
               }),
         );
+      case '/followAndInviteFriends':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const SettingsScreenFollowAndInvite(),
+        );
+      case '/yourActivity':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const YourActiviryScreen(),
+        );
+      case '/notifications':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const NotificationsScreen(),
+        );
+      case '/privacy':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const PrivacyScreen(),
+        );
+      case '/security':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const SecurityScreen(),
+        );
+
+      case '/account':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AccountScreen(),
+        );
+      case '/help':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const HelpScreen(),
+        );
+      case '/accountInfo':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const AccountInfoScreen(),
+        );
+      case '/interestsAndPrefrences':
+        return MaterialPageRoute(
+          builder: (BuildContext context) => const InterestsAndPrefrencesScreen(),
+        );
+
+
+
+
       default:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChoosePlatformScreen(),
