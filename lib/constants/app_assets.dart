@@ -440,5 +440,8 @@ class AppAssets {
     semanticsLabel: 'X icon black',
   );
 
+  static final Widget bellIconRoundedWhitePng = Image.asset('assets/bell_icon_rounded.png');
+
+
 
 }
