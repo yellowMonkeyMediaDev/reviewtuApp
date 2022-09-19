@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/other_users_profile_screen.dart';
+import 'package:reviewtu_app/screens/profile/other_users_profile_screen.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 class NotificationSettingsWidget extends StatefulWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/screens/app_router.dart';
-import 'package:reviewtu_app/screens/sign_in_saved_data_screen.dart';
-import 'package:reviewtu_app/screens/splash_screen.dart';
+import 'package:reviewtu_app/screens/login&Registration/sign_in_saved_data_screen.dart';
+import 'package:reviewtu_app/screens/login&Registration/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

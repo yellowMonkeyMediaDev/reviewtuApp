@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/login_screen.dart';
+import 'package:reviewtu_app/screens/login&Registration/login_screen.dart';
 import 'package:reviewtu_app/widgets/primary_button_widget.dart';
 
 class RegistrationScreen extends StatefulWidget {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
 import 'package:reviewtu_app/constants/profile_tab.dart';
-import 'package:reviewtu_app/screens/profile_screen.dart';
+import 'package:reviewtu_app/screens/profile/profile_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 import 'package:reviewtu_app/widgets/no_content_yet_widget.dart';
 import 'package:reviewtu_app/widgets/notification_settings_popup_widget.dart';

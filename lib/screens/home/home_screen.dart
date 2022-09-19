@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
 import 'package:reviewtu_app/constants/home_tab.dart';
-import 'package:reviewtu_app/screens/home_tab_navigator.dart';
-import 'package:reviewtu_app/screens/posts_feed_screen.dart';
-import 'package:reviewtu_app/screens/profile_screen.dart';
+import 'package:reviewtu_app/screens/home/home_tab_navigator.dart';
+import 'package:reviewtu_app/screens/home/posts_feed_screen.dart';
+import 'package:reviewtu_app/screens/profile/profile_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 
 class HomeScreen extends StatefulWidget {

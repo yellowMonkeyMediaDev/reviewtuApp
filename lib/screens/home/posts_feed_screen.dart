@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
-import 'package:reviewtu_app/screens/filter_reviews_popup.dart';
+import 'package:reviewtu_app/screens/home/filter_reviews_popup.dart';
 import 'package:reviewtu_app/widgets/post_widget.dart';
 
 class PostsFeedScreen extends StatefulWidget {
