@@ -11,14 +11,35 @@ class SecurityScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: ReviewtuNavigationBarWidget(
-        leadingWidget: GestureDetector(child: AppAssets.goBackButton, onTap: () {Navigator.pop(context);},),
-        title: " Settings",
+        leadingWidget: GestureDetector(
+          child: AppAssets.goBackButton,
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: " Security",
         automaticallyImplyLeading: false,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      'Login Security'),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             SizedBox(
               height: 44,
               child: Row(
@@ -27,11 +48,12 @@ class SecurityScreen extends StatelessWidget {
                   Row(
                     children: [
                       SizedBox(
-                          width: 28,
-                          height: 22,
-                          child: AppAssets.inviteFriendsViaWhatsappPng),
+                        width: 28,
+                        height: 22,
+                        child: AppAssets.padlock,
+                      ),
                       const SizedBox(width: 16),
-                      const Text('Invite Friends Via WhatsApp'),
+                      const Text('Password'),
                     ],
                   ),
                   SizedBox(
@@ -46,12 +68,9 @@ class SecurityScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      SizedBox(
-                          width: 28,
-                          height: 22,
-                          child: AppAssets.inviteFriendsViaMessagePng),
+                      SizedBox(width: 28, height: 22, child: AppAssets.arrow),
                       const SizedBox(width: 16),
-                      const Text('Invite Friend Via Message'),
+                      const Text('Login Activity'),
                     ],
                   ),
                   SizedBox(
@@ -69,10 +88,10 @@ class SecurityScreen extends StatelessWidget {
                       SizedBox(
                         height: 22,
                         width: 28,
-                        child: AppAssets.inviteFreindsViaEmailPng,
+                        child: AppAssets.key,
                       ),
                       const SizedBox(width: 16),
-                      const Text('Invite Friends Via Mail'),
+                      const Text('Saved Login Information'),
                     ],
                   ),
                   SizedBox(
@@ -90,16 +109,121 @@ class SecurityScreen extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      SizedBox(
-                          width: 28, height: 22, child: AppAssets.inviteFriendsViaAPng),
+                      SizedBox(width: 28, height: 22, child: AppAssets.shield),
                       const SizedBox(width: 16),
-                      const Text('Invite Friends Via...' ),
+                      const Text('Two Factor Authentication'),
                     ],
                   ),
                   SizedBox(
                       width: 7, height: 12, child: AppAssets.goFowardButtonPng),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(width: 28, height: 22, child: AppAssets.mail),
+                      const SizedBox(width: 16),
+                      const Text('Email From Reviewtu'),
+                    ],
+                  ),
+                  SizedBox(
+                      width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 1,
+            ),
+            const SizedBox(width: 20),
+            const Text(
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                'Data And History'),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                          width: 28, height: 22, child: AppAssets.dataCelluar),
+                      const SizedBox(width: 16),
+                      const Text('Access Data'),
+                    ],
+                  ),
+                  SizedBox(
+                      width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                          width: 28, height: 22, child: AppAssets.downloadData),
+                      const SizedBox(width: 16),
+                      const Text('Download Data'),
+                    ],
+                  ),
+                  SizedBox(
+                      width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                          width: 28,
+                          height: 22,
+                          child: AppAssets.websitesAndApps),
+                      const SizedBox(width: 16),
+                      const Text('Websites and Apps'),
+                    ],
+                  ),
+                  SizedBox(
+                      width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 44,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      SizedBox(
+                          width: 28,
+                          height: 22,
+                          child: AppAssets.searchIconThinBlack),
+                      const SizedBox(width: 16),
+                      const Text('Clear Search History'),
+                    ],
+                  ),
+                  SizedBox(
+                      width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 2,
             ),
           ],
         ),

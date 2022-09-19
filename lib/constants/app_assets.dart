@@ -225,8 +225,7 @@ class AppAssets {
 
   static final Widget logoutPng = Image.asset('assets/logout.png');
 
-  static final Widget inviteFriendsViaWhatsappPng =
-      Image.asset('assets/invite_friends_via_whatsapp.png');
+
 
   static final Widget inviteFriendsViaMessagePng =
       Image.asset('assets/invite_friends_via_message.png');
@@ -238,6 +237,37 @@ class AppAssets {
 
   static final Widget inviteFriendsViaAPng =
       Image.asset('assets/invite_friends_viaA.png');
+
+  static final Widget inviteFriendsViaWhatsappPng =
+      Image.asset('assets/invite_friends_via_whatsapp.png');
+
+  static final Widget padlock =
+     Image.asset('assets/padlock.png');
+
+  static final Widget arrow =
+     Image.asset('assets/arrow.png');
+
+  static final Widget key =
+     Image.asset('assets/key.png');
+
+  static final Widget shield =
+     Image.asset('assets/shield.png');
+
+  static final Widget mail =
+  Image.asset('assets/mail.png');
+
+  static final Widget dataCelluar =
+  Image.asset('assets/datacellular.png');
+
+  static final Widget downloadData =
+  Image.asset('assets/download_data.png');
+
+  static final Widget websitesAndApps =
+  Image.asset('assets/websites_and_apps.png');
+
+  static final Widget searchIconThinBlack =
+  Image.asset('assets/search_icon_thin_black.png');
+
 
   static final Widget interestsAndPrefrencesPng =
       Image.asset('assets/interests_and_prefrences.png');

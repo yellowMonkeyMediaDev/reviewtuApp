@@ -133,7 +133,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),
@@ -148,13 +150,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Row(
                       children: [
                         SizedBox(
-                            width: 28, height: 22, child: AppAssets.securityPng),
+                            width: 28,
+                            height: 22,
+                            child: AppAssets.securityPng),
                         const SizedBox(width: 16),
                         const Text('Security'),
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),
@@ -175,7 +181,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),
@@ -189,13 +197,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   children: [
                     Row(
                       children: [
-                        SizedBox(width: 28, height: 22, child: AppAssets.helpPng),
+                        SizedBox(
+                            width: 28, height: 22, child: AppAssets.helpPng),
                         const SizedBox(width: 16),
                         const Text('Help'),
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),
@@ -218,13 +229,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),
             ),
             GestureDetector(
-              onTap: () => {Navigator.pushNamed(context, "/interestsAndPrefrences")},
+              onTap: () =>
+                  {Navigator.pushNamed(context, "/interestsAndPrefrences")},
               child: SizedBox(
                 height: 44,
                 child: Row(
@@ -241,7 +255,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ],
                     ),
                     SizedBox(
-                        width: 7, height: 12, child: AppAssets.goFowardButtonPng),
+                        width: 7,
+                        height: 12,
+                        child: AppAssets.goFowardButtonPng),
                   ],
                 ),
               ),

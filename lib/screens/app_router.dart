@@ -117,7 +117,7 @@ class AppRouter {
         );
       case '/privacy':
         return MaterialPageRoute(
-          builder: (BuildContext context) => const PrivacyScreen(),
+          builder: (BuildContext context) =>  PrivacyScreen(),
         );
       case '/security':
         return MaterialPageRoute(
