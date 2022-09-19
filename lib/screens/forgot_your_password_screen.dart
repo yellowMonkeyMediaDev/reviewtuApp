@@ -65,6 +65,7 @@ class _ForgotYourPasswordScreenState extends State<ForgotYourPasswordScreen> {
                           displaySearchWidgets = false;
                         });
                       },
+                      showSuffixIcon: true,
                     )
                   : const SizedBox(),
               displaySearchWidgets
@@ -167,9 +168,16 @@ class ConfirmViaWidget extends StatelessWidget {
 }
 
 class AccountSearchWidget extends StatelessWidget {
-  const AccountSearchWidget({Key? key, this.onSubmitted}) : super(key: key);
+  const AccountSearchWidget({
+    Key? key,
+    this.onSubmitted,
+    this.suffixIconCallback,
+    required this.showSuffixIcon,
+  }) : super(key: key);
 
   final Function(String)? onSubmitted;
+  final Function()? suffixIconCallback;
+  final bool showSuffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -317,7 +325,7 @@ class CodeHasBeenSentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  [
+      children: [
         const Text(
           'A code has been sent to your\nphone. Enter that code here.',
           textAlign: TextAlign.center,
@@ -327,6 +335,7 @@ class CodeHasBeenSentWidget extends StatelessWidget {
           height: 46,
         ),
         const TextInputWidget(
+          showSuffixIcon: false,
           textAlign: TextAlign.center,
           height: 57,
           placeholder: 'Enter Code',
@@ -342,7 +351,7 @@ class CodeHasBeenSentWidget extends StatelessWidget {
           textColor: AppColors.white,
           buttonText: "Continue",
           buttonHeight: 40,
-          callback: (){
+          callback: () {
             Navigator.pushNamed(context, '/chooseYourInterests');
           },
         ),

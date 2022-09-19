@@ -332,4 +332,83 @@ class AppAssets {
     'assets/star_icon_for_rating.svg',
     semanticsLabel: 'Star icon',
   );
+
+  static final Widget halfFullStarIcon = SvgPicture.asset(
+    'assets/half_full_star_icon.svg',
+    semanticsLabel: 'Half full star icon',
+  );
+
+  static final Widget fullStarIcon = SvgPicture.asset(
+    'assets/full_star_icon.svg.svg',
+    semanticsLabel: 'Full star icon',
+  );
+
+  static final Widget instagramIconBlack = Image.asset('assets/instagram_icon_png.png');
+
+  static final Widget bellIcon = SvgPicture.asset(
+    'assets/bell_icon.svg',
+    semanticsLabel: 'Bell icon',
+  );
+
+  static final Widget threeDotsRoundedIcon = SvgPicture.asset(
+    'assets/three_dots_rounded_icon.svg',
+    semanticsLabel: 'Three dots rounded icon',
+  );
+
+  static final Widget alreadyFollowingIconBlack = SvgPicture.asset(
+    'assets/already_following_icon.svg',
+    semanticsLabel: 'Already following icon',
+  );
+
+  static final Widget homeIconGrey = SvgPicture.asset(
+    'assets/home_icon_grey.svg',
+    semanticsLabel: 'Home icon grey',
+  );
+
+  static final Widget bellIconBlack = SvgPicture.asset(
+    'assets/bell_icon_black.svg',
+    semanticsLabel: 'Bell icon black',
+  );
+
+  static final Widget bellIconGrey = SvgPicture.asset(
+    'assets/bell_icon_grey.svg',
+    semanticsLabel: 'Bell icon grey',
+  );
+
+
+  static final Widget favoritesIconBlack = SvgPicture.asset(
+    'assets/favorites_icon_black.svg',
+    semanticsLabel: 'Favorites icon black',
+  );
+
+  static final Widget tomWeissPhotoRounded = Image.asset('assets/tom_weis_sample_photo.png');
+
+  static final Widget michaelCohenPhotoRounded = Image.asset('assets/michael_cohen_sample_photo.png');
+
+  static final Widget downArowRoundedBlack = SvgPicture.asset(
+    'assets/down_arrow_rounded_black.svg',
+    semanticsLabel: 'Down arrow rounded black',
+  );
+
+  static final Widget bellRoundedWhiteIcon = SvgPicture.asset(
+    'assets/bell_rounded_white_icon.svg',
+    semanticsLabel: 'Bell rounded white icon',
+  );
+
+  static final Widget turnOffNotificationsIcon = SvgPicture.asset(
+    'assets/notifications_turned_off_icon.svg',
+    semanticsLabel: 'Notifications turned off icon',
+  );
+
+  static final Widget notificationsWhiteIcon = SvgPicture.asset(
+    'assets/notifications_white_icon.svg',
+    semanticsLabel: 'Notifications white icon',
+  );
+
+  static final Widget xIconBlack = SvgPicture.asset(
+    'assets/x_icon_black.svg',
+    semanticsLabel: 'X icon black',
+  );
+
+
 }

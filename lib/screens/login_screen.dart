@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: TextInputWidget(
+                  showSuffixIcon: false,
                   placeholder: 'Username or email',
                   border: OutlineInputBorder(
                     borderSide:
@@ -44,6 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: TextInputWidget(
+                  showSuffixIcon: false,
                   placeholder: 'Password',
                   obscureText: true,
                   border: OutlineInputBorder(
@@ -125,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 }
 
-class TextInputWidget extends StatelessWidget {
+class TextInputWidget extends StatefulWidget {
   const TextInputWidget({
     Key? key,
     required this.placeholder,
@@ -137,6 +139,8 @@ class TextInputWidget extends StatelessWidget {
     this.height,
     this.textAlign,
     this.onSubmitted,
+    this.controller,
+    this.prefixIcon,
   }) : super(key: key);
 
   final String placeholder;
@@ -148,29 +152,61 @@ class TextInputWidget extends StatelessWidget {
   final Function(String)? onSubmitted;
   final double? height;
   final TextAlign? textAlign;
+  final TextEditingController? controller;
+  final Widget? prefixIcon;
+
+  @override
+  State<TextInputWidget> createState() => _TextInputWidgetState();
+}
+
+class _TextInputWidgetState extends State<TextInputWidget> {
+  final _controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _controller.addListener(() {
+      setState(() {});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height ?? 40,
+      height: widget.height ?? 40,
       child: TextField(
-        onSubmitted: onSubmitted ?? (string) {},
+        controller: _controller,
+        onSubmitted: widget.onSubmitted ?? (string) {},
         keyboardType: TextInputType.text,
         autofocus: true,
-        textAlign: textAlign ?? TextAlign.start,
+        textAlign: widget.textAlign ?? TextAlign.start,
         textAlignVertical: TextAlignVertical.bottom,
-        obscureText: obscureText ?? false,
+        obscureText: widget.obscureText ?? false,
         decoration: InputDecoration(
+          prefixIconConstraints: const BoxConstraints(
+            maxHeight: 15,
+          ),
+          prefixIcon: widget.prefixIcon,
           suffixIconConstraints: const BoxConstraints(maxHeight: 19),
-          suffixIcon: showSuffixIcon ?? false
-              ? Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                  child: suffixIcon ?? AppAssets.checkedIcon,
+          suffixIcon: _controller.text.isNotEmpty
+              ? GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _controller.clear();
+                    });
+                  },
+                  child: widget.showSuffixIcon ?? true
+                      ? Padding(
+                          padding: const EdgeInsets.only(right: 10.0),
+                          child: widget.suffixIcon ?? AppAssets.checkedIcon,
+                        )
+                      : const SizedBox(),
                 )
               : const SizedBox(),
           fillColor: AppColors.extraLightGrey,
-          hintText: placeholder,
-          border: border,
+          hintText: widget.placeholder,
+          border: widget.border,
         ),
       ),
     );

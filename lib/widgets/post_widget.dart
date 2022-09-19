@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:reviewtu_app/constants/app_assets.dart';
 import 'package:reviewtu_app/constants/app_colors.dart';
 
@@ -77,10 +78,15 @@ class PostUserInfoWidget extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
-                child: SizedBox(
-                    width: 35,
-                    height: 35,
-                    child: AppAssets.postProfilePicturePng),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/otherUsersProfile');
+                  },
+                  child: SizedBox(
+                      width: 35,
+                      height: 35,
+                      child: AppAssets.postProfilePicturePng),
+                ),
               ),
               const SizedBox(width: 10),
               Column(
@@ -89,10 +95,15 @@ class PostUserInfoWidget extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const Text(
-                        'Mike Jones',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 13),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, '/otherUsersProfile');
+                        },
+                        child: const Text(
+                          'Mike Jones',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600, fontSize: 13),
+                        ),
                       ),
                       const SizedBox(width: 5),
                       AppAssets.verifiedProfileIcon,
@@ -190,9 +201,18 @@ class PostContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: MediaQuery.of(context).size.width,
-        child: AppAssets.sampleGTAPhoto);
+    return Stack(
+      children: [
+        SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: AppAssets.sampleGTAPhoto),
+        const Positioned(
+          top: 15,
+          left: 11,
+          child: PostFeedRattingWidget(),
+        ),
+      ],
+    );
   }
 }
 
@@ -204,6 +224,41 @@ class PostDateAndTimeWidget extends StatelessWidget {
     return const Text(
       'September 19',
       style: TextStyle(fontWeight: FontWeight.w400, fontSize: 11),
+    );
+  }
+}
+
+class PostFeedRattingWidget extends StatelessWidget {
+  const PostFeedRattingWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 30,
+      decoration: BoxDecoration(
+        color: AppColors.darkerGrey,
+        border: Border.all(
+          color: AppColors.darkerGrey,
+        ),
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 3),
+        child: RatingBar(
+          initialRating: 3,
+          direction: Axis.horizontal,
+          allowHalfRating: true,
+          itemCount: 5,
+          itemSize: 20,
+          ratingWidget: RatingWidget(
+            full: AppAssets.starIconForRating,
+            half: AppAssets.halfFullStarIcon,
+            empty: AppAssets.halfFullStarIcon,
+          ),
+          itemPadding: const EdgeInsets.symmetric(horizontal: 3.0),
+          onRatingUpdate: (rating) {},
+        ),
+      ),
     );
   }
 }

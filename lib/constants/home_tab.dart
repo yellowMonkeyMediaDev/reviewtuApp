@@ -12,13 +12,13 @@ enum HomeTab {
 Widget getTabIcon(HomeTab tab) {
   switch (tab) {
     case HomeTab.home:
-      return AppAssets.homeIconPng;
+      return AppAssets.homeIconGrey;
     case HomeTab.search:
       return AppAssets.searchIconPng;
     case HomeTab.post:
       return AppAssets.postIconPng;
     case HomeTab.notifications:
-      return AppAssets.notificationsIconPng;
+      return AppAssets.bellIconGrey;
     case HomeTab.profile:
       return AppAssets.profileIconPng;
   }
@@ -29,11 +29,11 @@ Widget getTabActiveIcon(HomeTab tab) {
     case HomeTab.home:
       return AppAssets.homeIconPng;
     case HomeTab.search:
-      return AppAssets.searchIconPng;
+      return AppAssets.searchBlackIcon;
     case HomeTab.post:
-      return AppAssets.postIconPng;
+      return AppAssets.favoritesIconBlack;
     case HomeTab.notifications:
-      return AppAssets.notificationsIconPng;
+      return AppAssets.bellIconBlack;
     case HomeTab.profile:
       return AppAssets.profileIconPng;
   }
