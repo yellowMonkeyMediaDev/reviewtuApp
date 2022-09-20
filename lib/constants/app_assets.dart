@@ -225,8 +225,6 @@ class AppAssets {
 
   static final Widget logoutPng = Image.asset('assets/logout.png');
 
-
-
   static final Widget inviteFriendsViaMessagePng =
       Image.asset('assets/invite_friends_via_message.png');
 
@@ -241,33 +239,25 @@ class AppAssets {
   static final Widget inviteFriendsViaWhatsappPng =
       Image.asset('assets/invite_friends_via_whatsapp.png');
 
-  static final Widget padlock =
-     Image.asset('assets/padlock.png');
+  static final Widget padlock = Image.asset('assets/padlock.png');
 
-  static final Widget arrow =
-     Image.asset('assets/arrow.png');
+  static final Widget arrow = Image.asset('assets/arrow.png');
 
-  static final Widget key =
-     Image.asset('assets/key.png');
+  static final Widget key = Image.asset('assets/key.png');
 
-  static final Widget shield =
-     Image.asset('assets/shield.png');
+  static final Widget shield = Image.asset('assets/shield.png');
 
-  static final Widget mail =
-  Image.asset('assets/mail.png');
+  static final Widget mail = Image.asset('assets/mail.png');
 
-  static final Widget dataCelluar =
-  Image.asset('assets/datacellular.png');
+  static final Widget dataCelluar = Image.asset('assets/datacellular.png');
 
-  static final Widget downloadData =
-  Image.asset('assets/download_data.png');
+  static final Widget downloadData = Image.asset('assets/download_data.png');
 
   static final Widget websitesAndApps =
-  Image.asset('assets/websites_and_apps.png');
+      Image.asset('assets/websites_and_apps.png');
 
   static final Widget searchIconThinBlack =
-  Image.asset('assets/search_icon_thin_black.png');
-
+      Image.asset('assets/search_icon_thin_black.png');
 
   static final Widget interestsAndPrefrencesPng =
       Image.asset('assets/interests_and_prefrences.png');
@@ -373,7 +363,8 @@ class AppAssets {
     semanticsLabel: 'Full star icon',
   );
 
-  static final Widget instagramIconBlack = Image.asset('assets/instagram_icon_png.png');
+  static final Widget instagramIconBlack =
+      Image.asset('assets/instagram_icon_png.png');
 
   static final Widget bellIcon = SvgPicture.asset(
     'assets/bell_icon.svg',
@@ -405,15 +396,16 @@ class AppAssets {
     semanticsLabel: 'Bell icon grey',
   );
 
-
   static final Widget favoritesIconBlack = SvgPicture.asset(
     'assets/favorites_icon_black.svg',
     semanticsLabel: 'Favorites icon black',
   );
 
-  static final Widget tomWeissPhotoRounded = Image.asset('assets/tom_weis_sample_photo.png');
+  static final Widget tomWeissPhotoRounded =
+      Image.asset('assets/tom_weis_sample_photo.png');
 
-  static final Widget michaelCohenPhotoRounded = Image.asset('assets/michael_cohen_sample_photo.png');
+  static final Widget michaelCohenPhotoRounded =
+      Image.asset('assets/michael_cohen_sample_photo.png');
 
   static final Widget downArowRoundedBlack = SvgPicture.asset(
     'assets/down_arrow_rounded_black.svg',
@@ -440,8 +432,51 @@ class AppAssets {
     semanticsLabel: 'X icon black',
   );
 
-  static final Widget bellIconRoundedWhitePng = Image.asset('assets/bell_icon_rounded.png');
+  static final Widget bellIconRoundedWhitePng =
+      Image.asset('assets/bell_icon_rounded.png');
 
+  static final Widget microphoneIcon = SvgPicture.asset(
+    'assets/microphone_icon.svg',
+    semanticsLabel: 'Microphone icon',
+  );
 
+  static final Widget starIconForRatingBlack = SvgPicture.asset(
+    'assets/star_icon_for_rating_black.svg',
+    semanticsLabel: 'Star icon for review black',
+  );
 
+  static final Widget counterStrikePhoto = Image.asset(
+    'assets/counter_strike_jpg.jpeg',
+  );
+
+  static final Widget minecraftPhoto = Image.asset(
+    'assets/minecraft_photo.jpeg',
+  );
+
+  static final Widget gtaFivePhoto = Image.asset(
+    'assets/gta_five_photo.jpeg',
+  );
+
+  static final Widget closeIconRoundedDarkGrey = SvgPicture.asset(
+    'assets/close_icon_rounded_dark_grey.svg',
+    semanticsLabel: 'Close icon rounded dark grey',
+  );
+
+  static final Widget closeIconRoundedEmpty = SvgPicture.asset(
+    'assets/close_icon_rounded_empty.svg',
+    semanticsLabel: 'Close icon rounded empty',
+  );
+
+  static final Widget jamesAtkinsProfilePhoto = Image.asset(
+    'assets/james_atkins_profile_photo.jpeg',
+  );
+
+  static final Widget activisionGamesPhoto = Image.asset(
+    'assets/activision_games_photo.jpeg',
+  );
+
+  static final Widget leftArrowBlue = SvgPicture.asset(
+    'assets/left_arrow_blue.svg',
+    semanticsLabel: 'Left arrow blue icon',
+  );
 }

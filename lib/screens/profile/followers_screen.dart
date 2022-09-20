@@ -148,7 +148,16 @@ class FollowUserWidget extends StatelessWidget {
 }
 
 class SearchFollowersWidget extends StatelessWidget {
-  const SearchFollowersWidget({Key? key}) : super(key: key);
+  const SearchFollowersWidget({
+    Key? key,
+    required this.placeholder,
+    this.suffixIcon,
+    this.radius,
+  }) : super(key: key);
+
+  final String placeholder;
+  final Widget? suffixIcon;
+  final double? radius;
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +167,7 @@ class SearchFollowersWidget extends StatelessWidget {
         border: Border.all(
           color: AppColors.lightGrey,
         ),
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(radius ?? 5),
       ),
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0),
@@ -167,7 +176,8 @@ class SearchFollowersWidget extends StatelessWidget {
             padding: const EdgeInsets.only(right: 5.0),
             child: AppAssets.searchGreyIcon,
           ),
-          placeholder: 'Search',
+          suffixIcon: suffixIcon,
+          placeholder: placeholder,
           border: InputBorder.none,
         ),
       ),
@@ -187,7 +197,9 @@ class ListOfFollowersWidget extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 15.0),
-          child: SearchFollowersWidget(),
+          child: SearchFollowersWidget(
+            placeholder: "Search",
+          ),
         ),
         const SizedBox(
           height: 6,

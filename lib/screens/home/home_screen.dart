@@ -5,6 +5,7 @@ import 'package:reviewtu_app/constants/home_tab.dart';
 import 'package:reviewtu_app/screens/home/home_tab_navigator.dart';
 import 'package:reviewtu_app/screens/home/posts_feed_screen.dart';
 import 'package:reviewtu_app/screens/profile/profile_screen.dart';
+import 'package:reviewtu_app/screens/search/search_screen.dart';
 import 'package:reviewtu_app/widgets/app_navigation_bar_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           children: const [
             PostsFeedScreen(),
             //HomeTabNavigator(navigatorKey: navigatorKey),
-            ProfileScreen(),
+            SearchScreen(),
             ProfileScreen(),
             ProfileScreen(),
             ProfileScreen(),
@@ -72,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  ReviewtuNavigationBarWidget _getCorrectNavBarWidget(HomeTab selectedTab) {
+  ReviewtuNavigationBarWidget? _getCorrectNavBarWidget(HomeTab selectedTab) {
     switch (selectedTab) {
       case HomeTab.home:
         return ReviewtuNavigationBarWidget(
@@ -88,11 +89,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
         );
       case HomeTab.search:
-        return ReviewtuNavigationBarWidget(
-          automaticallyImplyLeading: false,
-          title: "Mike Jones",
-          trailingWidget: AppAssets.settingsWhiteIcon,
-        );
+        return null;
       case HomeTab.post:
         return ReviewtuNavigationBarWidget(
           automaticallyImplyLeading: false,

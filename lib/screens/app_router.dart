@@ -13,6 +13,8 @@ import 'package:reviewtu_app/screens/profile/other_users_profile_screen.dart';
 import 'package:reviewtu_app/screens/login&Registration/password_login_screen.dart';
 import 'package:reviewtu_app/screens/profile/profile_screen.dart';
 import 'package:reviewtu_app/screens/login&Registration/registration_screen.dart';
+import 'package:reviewtu_app/screens/search/recent_searches_screen.dart';
+import 'package:reviewtu_app/screens/search/search_screen.dart';
 import 'package:reviewtu_app/screens/settings/account_info.dart';
 import 'package:reviewtu_app/screens/settings/account_screen.dart';
 import 'package:reviewtu_app/screens/settings/help_screen.dart';
@@ -105,7 +107,8 @@ class AppRouter {
         );
       case '/followAndInviteFriends':
         return MaterialPageRoute(
-          builder: (BuildContext context) => const SettingsScreenFollowAndInvite(),
+          builder: (BuildContext context) =>
+              const SettingsScreenFollowAndInvite(),
         );
       case '/yourActivity':
         return MaterialPageRoute(
@@ -117,7 +120,7 @@ class AppRouter {
         );
       case '/privacy':
         return MaterialPageRoute(
-          builder: (BuildContext context) =>  PrivacyScreen(),
+          builder: (BuildContext context) => PrivacyScreen(),
         );
       case '/security':
         return MaterialPageRoute(
@@ -138,12 +141,19 @@ class AppRouter {
         );
       case '/interestsAndPrefrences':
         return MaterialPageRoute(
-          builder: (BuildContext context) => const InterestsAndPrefrencesScreen(),
+          builder: (BuildContext context) =>
+              const InterestsAndPrefrencesScreen(),
         );
-
-
-
-
+      case '/search':
+        return MaterialPageRoute(
+          builder: (BuildContext context) =>
+              const SearchScreen(),
+        );
+      case '/recentSearches':
+        return MaterialPageRoute(
+          builder: (BuildContext context) =>
+          const RecentSearchesScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (BuildContext context) => const ChoosePlatformScreen(),

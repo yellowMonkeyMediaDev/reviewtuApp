@@ -70,18 +70,22 @@ class RatingWidget extends StatelessWidget {
     Key? key,
     required this.ratting,
     this.trailingWidget,
+    this.fontColor,
+    this.backgroundColor,
   }) : super(key: key);
 
   final double ratting;
   final Widget? trailingWidget;
+  final Color? fontColor;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.darkerGrey,
+        color: backgroundColor ?? AppColors.darkerGrey,
         border: Border.all(
-          color: AppColors.darkerGrey,
+          color: backgroundColor ??  AppColors.darkerGrey,
         ),
         borderRadius: BorderRadius.circular(30),
       ),
@@ -91,10 +95,10 @@ class RatingWidget extends StatelessWidget {
           children: [
             Text(
               ratting.toString(),
-              style: const TextStyle(
+              style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
-                  color: AppColors.white),
+                  color: fontColor ?? AppColors.white),
             ),
             trailingWidget ?? AppAssets.starIconForRating,
           ],
